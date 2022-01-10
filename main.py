@@ -5,9 +5,9 @@ Links:
 
 from flask import Flask, render_template
 
-sample_app = Flask(__name__)
+app = Flask(__name__)
 
 
-@sample_app.route("/")
+@app.route("/")
 def display_home():
     return render_template("templates/homepage.html")

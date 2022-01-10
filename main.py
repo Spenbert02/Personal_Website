@@ -10,4 +10,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def display_home():
-    return render_template("templates/homepage.html")
+    return render_template("homepage.html")

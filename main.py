@@ -7,13 +7,11 @@ from flask import Flask, render_template
 from whitenoise import WhiteNoise
 
 
-def create_app():
-    app = Flask(__name__)
+app = Flask(__name__)
+app.static_folder = "static"
+app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="assets/")
 
-    @app.route("/")
-    def display_home():
-        return render_template("homepage.html")
 
-    app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="assets/")
-
-    return app
+@app.route("/")
+def home():
+    return render_template("homepage.html")

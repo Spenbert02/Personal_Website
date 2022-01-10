@@ -82,7 +82,6 @@ body {
     width: 33%;
 }
 
-
 /* top left name link */
 .name-logo a {
     font-size: 2em;
@@ -125,6 +124,7 @@ body {
 .body-container {
     place-content: center;
     width: 100%;
+    margin-bottom: 100px;
 }
 
 /* introdution paragraph container */
@@ -183,14 +183,17 @@ body {
     .hero-container {
         height: 600px;
     }
-
-    .body-container {
-        margin-bottom: 100px;
-    }
 }
 
 @media only screen and (max-width: 800px) {
     .nav-menu {
         flex-direction: column;
+    }
+
+    .nav-menu > div {
+        margin-bottom: .5em;
+        margin-right: 1em;
+        text-align: right;
+        width: 100%;
     }
 }

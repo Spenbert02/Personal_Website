@@ -6,10 +6,14 @@ Links:
 from flask import Flask, render_template
 from whitenoise import WhiteNoise
 
-app = Flask(__name__)
-app.wsgi_app = WhiteNoise(app.wsgi_app, root="static")
 
+def create_app():
+    app = Flask(__name__)
 
-@app.route("/")
-def display_home():
-    return render_template("homepage.html")
+    @app.route("/")
+    def display_home():
+        return render_template("homepage.html")
+
+    app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix="assets/")
+
+    return app

@@ -1,3 +1,7 @@
+/* --------------------------------------------
+sitewide ('master.html') styles
+-------------------------------------------- */
+
 /* 'Raleway' google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
@@ -18,53 +22,6 @@ body {
     background-color: var(--main_bg_color);
     font-family: "Raleway";
     margin: 0;
-}
-
-/* container for hero section */
-.hero-container {
-    display: flex;
-    place-content: space-evenly;
-    flex-wrap: wrap;
-    height: 500px;
-}
-
-/* left side of hero */
-.hero-container > .left-side {
-    width: 500px;
-    position: relative;
-}
-
-/* container for text in left side of hero */
-.hi-im-spencer {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 1.5em;
-    height: 200px;
-}
-
-/* right side of hero */
-.hero-container > .right-side {
-    width: 500px;
-    height: 400px;
-    position: relative;
-}
-
-/* image in right side of hero */
-.headshot {
-    width: 400px;
-    height: 400px;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
 }
 
 /* navigation bar container */
@@ -120,6 +77,81 @@ body {
     text-decoration: underline;
 }
 
+/* footer filler */
+.filler {
+    width: 1px;
+}
+
+/* footer container for linkedin and email */
+.link-container {
+    display: flex;
+    place-content: space-between;
+    padding-top: .4em;
+}
+
+/* link container divs (each of the link divs) */
+.link-container > div {
+    margin-right: 2em;
+}
+
+/* link actual text */
+.link-container > div a {
+    color: var(--secondary_color);
+    text-decoration: none;
+}
+
+
+/* --------------------------------------------
+homepage styles
+-------------------------------------------- */
+
+/* container for hero section */
+.hero-container {
+    display: flex;
+    place-content: space-evenly;
+    flex-wrap: wrap;
+    height: 500px;
+}
+
+/* left side of hero */
+.hero-container > .left-side {
+    width: 500px;
+    position: relative;
+}
+
+/* container for text in left side of hero */
+.hi-im-spencer {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5em;
+    height: 200px;
+}
+
+/* right side of hero */
+.hero-container > .right-side {
+    width: 500px;
+    height: 400px;
+    position: relative;
+}
+
+/* image in right side of hero */
+.headshot {
+    width: 400px;
+    height: 400px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
 /* body container, below hero */
 .body-container {
     place-content: center;
@@ -131,7 +163,7 @@ body {
 .intro-text {
     width: 50%;
     margin: auto;
-    text-align: center;
+    text-align: left;
 }
 
 /* footer container */
@@ -146,26 +178,8 @@ body {
     bottom: 0;
 }
 
-.filler {
-    width: 1px;
-}
-
-.link-container {
-    display: flex;
-    place-content: space-between;
-    padding-top: .4em;
-}
-
-.link-container > div {
-    margin-right: 2em;
-}
-
-.link-container > div a {
-    color: var(--secondary_color);
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 1000px) {
+/* homepage trigger for going vertical with greeting and headshot */
+@media only screen and (max-width: 1020px) {
     .headshot {
         width: 300px;
         height: 300px;
@@ -185,6 +199,7 @@ body {
     }
 }
 
+/* navbar trigger for listing pages vertically */
 @media only screen and (max-width: 800px) {
     .nav-menu {
         flex-direction: column;
@@ -196,4 +211,138 @@ body {
         text-align: right;
         width: 100%;
     }
+}
+
+
+/* --------------------------------------------
+project display template styles
+-------------------------------------------- */
+
+/* intro text at the top of the page */
+.page-intro-container {
+    height: 200px;
+    text-align: center;
+    position: relative;
+}
+
+/* intro paragraph for projects page */
+.page-intro {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 50%;
+}
+
+/* resizing intro text when screen gets narrow */
+@media only screen and (max-width: 800px) {
+    .page-intro-container {
+        height: 300px;
+    }
+}
+
+/* container for holding each project */
+.project-container {
+    display: flex;
+    flex-flow: row wrap;
+    place-content: end center;
+}
+
+/* each project link box thing */
+.individual-project {
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 10px;
+    border-color: black;
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+    display: flex;
+    flex-flow: row-wrap;
+    place-content: space-evenly;
+    background-image: url("placeholder-image.png");
+    background-color: black;
+    -webkit-filter: brightness(100%);
+}
+
+/* darkening bg image on hover for individual projects */
+.individual-project:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/* container for project titles */
+.project-title-container {
+    width: 150px;
+    position: relative;
+}
+
+/* project titles (centering within project div) */
+.project-title {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    height: 30px;
+    width: 200px;
+}
+
+/* title text link in projects */
+.project-title > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* underlining title text link on hover */
+.project-title > a:hover {
+    text-decoration: underline;
+}
+
+/* filler to prevent overlap at bottom of page */
+.project-display-filler {
+    height: 100px;
+}
+
+
+/* --------------------------------------------
+project page styles
+-------------------------------------------- */
+
+/* bg image for project 1, gcode2fisnar */
+.proj-1 {
+    background-image: url("sliced_fisnar_pic_resized.png");
+}
+
+/* setting bg image for project 2 (stirbot) */
+.proj-2 {
+    background-image: url("stirbot_picture_resized.jpg");
+}
+
+/* setting bg image for project 3 (website) */
+.proj-3 {
+    background-image: url("website_pic_resized.png");
+}
+
+/* project 4 bg image */
+.proj-4 {
+}
+
+/* project 5 bg image */
+.proj-5 {
+}
+
+/* project 6 bg image */
+.proj-6 {
 }

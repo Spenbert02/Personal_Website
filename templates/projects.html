@@ -1,0 +1,38 @@
+{% extends "project_display_template.html" %}
+
+{% block page_title %}<title>Projects</title>{% endblock %}
+
+{% block projects %}
+<div class="current">
+    <a href="/projects" target="_self">Projects</a>
+</div>
+{% endblock %}
+
+{% block page_intro %}
+&emsp;A collection of research, personal, and coursework projects I've worked on while in college.
+These projects mainly involve programming and robotics.
+Many of them revolve around 3D-printing, which I've found a strong interest in both as a hobby and an area of research.
+{% endblock %}
+
+{% block project_1_title %}
+gcode2fisnar
+{% endblock %}
+
+{% block project_2_title %}
+StirBot
+{% endblock %}
+
+{% block project_3_title %}
+This Website
+{% endblock %}
+
+
+<!--the following blocks replace the project templates with nothing since there are fewer than 6 projects to display-->
+{% block project_6 %}
+{% endblock %}
+
+{% block project_5 %}
+{% endblock %}
+
+{% block project_4 %}
+{% endblock %}

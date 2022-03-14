@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    {% block page_title %}<title>Page Title</title>{% endblock %}
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="name-logo">
+            <a href="/" target="_self">Spencer Bertram</a>
+        </div>
+
+        <div class="nav-menu">
+            {% block home %}
+            <div class="not-current">
+                <a href="/" target="_self">Home</a>
+            </div>
+            {% endblock %}
+
+            {% block resume %}
+            <div class="not-current">
+                <a href="https://drive.google.com/file/d/1Yl4dlo1eTyJ4RcJEQkvl0X4VLEYppjhk/view?usp=sharing" target="_blank">Resume</a> <!--temp: goes to google docs resume-->
+            </div>
+            {% endblock %}
+
+            {% block projects %}
+            <div class="not-current">
+                <a href="/projects" target="_self">Projects</a>
+            </div>
+            {% endblock %}
+
+            {% block writeups %}
+            <div class="not-current">
+                <a href="/" target="_self">Write-Ups</a> <!--temp: goes to homepage-->
+            </div>
+            {% endblock %}
+        </div>
+
+    </div>
+
+    <div id="main-content">{% block body %}{% endblock %}</div>
+
+    <div class="footer-container">
+        <div class="filler"></div>
+
+        <div class="link-container">
+            <div class="footer-link">
+                <a href="https://www.linkedin.com/in/spencer-bertram/" target="_blank">LinkedIn</a>
+            </div>
+
+            <div class="footer-link">
+                <a href="mailto: spenbert02@gmail.com">spenbert02@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

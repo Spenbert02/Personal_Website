@@ -1,0 +1,77 @@
+{% extends "master.html" %}
+
+{% block body %}
+<div class="page-intro-container">
+    <div class="page-intro">
+        <p>{% block page_intro %}{% endblock %}</p>
+    </div>
+</div>
+
+<div class="project-container">
+    {% block project_1 %}
+    <div class="individual-project proj-1">
+        <div class="project-title-container">
+            <div class="project-title">
+                <a href="/" target="_self">{% block project_1_title %} Title {% endblock %}</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block project_2 %}
+    <div class="individual-project proj-2">
+        <div class="project-title-container">
+            <div class="project-title">
+                <a href="/" target="_self">{% block project_2_title %} Title {% endblock %}</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block project_3 %}
+    <div class="individual-project proj-3">
+        <div class="project-title-container">
+            <div class="project-title">
+                <a href="/" target="_self">{% block project_3_title %} Title {% endblock %}</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block project_4 %}
+    <div class="individual-project proj-4">
+        <div class="project-title-container">
+            <div class="project-title">
+                <a href="/" target="_self">{% block project_4_title %} Title {% endblock %}</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block project_5 %}
+    <div class="individual-project proj-5">
+        <div class="project-title-container">
+            <div class="project-title">
+                <a href="/" target="_self">{% block project_5_title %} Title {% endblock %}</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block project_6 %}
+    <div class="individual-project proj-6">
+        <div class="project-title-container">
+            <div class="project-title">
+                <a href="/" target="_self">{% block project_6_title %} Title {% endblock %}</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+</div>
+
+<div class="project-display-filler">
+
+</div>
+
+{% endblock %}
